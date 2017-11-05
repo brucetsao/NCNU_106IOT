@@ -7,12 +7,7 @@ void setup () {
     Serial.begin(9600);
     Wire1.begin();
     RTC.begin();
-     RTC.adjust(DateTime(__DATE__, __TIME__));
-  if (! RTC.isrunning()) {
-    Serial.println("RTC is NOT running!");
-    // following line sets the RTC to the date & time this sketch was compiled
-    RTC.adjust(DateTime(__DATE__, __TIME__));
-  }
+ 
 }
 void loop () {
     DateTime now = RTC.now(); 

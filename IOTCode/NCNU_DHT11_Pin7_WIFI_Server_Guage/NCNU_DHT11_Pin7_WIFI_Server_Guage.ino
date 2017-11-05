@@ -106,13 +106,10 @@ void loop()
           client.println("google.charts.load('current', {'packages':['gauge']});");
           client.println("google.charts.setOnLoadCallback(drawChart);");
           client.println("  function drawChart() {");
-          client.println("var data = google.visualization.arrayToDataTable([['Label', 'Value'],['hum',");
+          client.println("var data = google.visualization.arrayToDataTable([['Label', 'Value'],['濕度',");
           client.println(h);
-          client.println("],");
-          client.println("['Temp',");
-          client.println(t);
           client.println("],]);");
-          client.println(" var options = {width: 300, height: 300,redFrom: 70, redTo: 100,yellowFrom:50, yellowTo: 70,minorTicks: 5};");
+          client.println(" var options = {width: 300, height: 300,redFrom: 90, redTo: 100,yellowFrom:75, yellowTo: 90,minorTicks: 5};");
           client.println("var chart = new google.visualization.Gauge(document.getElementById('chart_div'));");
           client.println("chart.draw(data, options);");
           client.println("}");

@@ -109,7 +109,7 @@ void loop()
   }
   
   lastConnected = client.connected();
-  delay(20000);
+  delay(2000);
 } // END Loop
 
 
